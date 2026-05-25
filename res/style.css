@@ -13,17 +13,19 @@
 }
 
 @media (max-width: 768px) {
-  --card-max-width: 40em;
-  --card-text-align: left;
-  --font-size-regular: 16px;
-  --font-size-small: 14px;
-  --img-width: 50%;
-  --img-brightness: 0.95;
-  --img-filter: none;
-  --font-weight: 600;
-  --table-radius: 0.8em;
-  --card-radius: 8px;
-  --mochi-mobile-toggle: block;
+  :root {
+    --card-max-width: 40em;
+    --card-text-align: left;
+    --font-size-regular: 16px;
+    --font-size-small: 14px;
+    --img-width: 50%;
+    --img-brightness: 0.95;
+    --img-filter: none;
+    --font-weight: 600;
+    --table-radius: 0.8em;
+    --card-radius: 8px;
+    --mochi-mobile-toggle: block;
+  }
 }
 
 /* -------------------------------------------------- COLORS */
