@@ -12,7 +12,7 @@
   --mochi-toggle: block;
 }
 
-.mobile {
+@media (max-width: 768px) {
   --card-max-width: 40em;
   --card-text-align: left;
   --font-size-regular: 16px;
@@ -260,7 +260,7 @@ body.night_mode {
   margin-bottom: 1em;
 }
 
-.mobile .prettify-field {
+@media (max-width: 768px) .prettify-field {
   margin: 0.25em;
   margin-bottom: 0.75em;
 }
@@ -295,7 +295,7 @@ body.night_mode {
   display: none;
 }
 
-.mobile .prettify-deck {
+@media (max-width: 768px) .prettify-deck {
   margin: 1em;
 }
 
@@ -315,7 +315,7 @@ body.night_mode {
   font-size: var(--font-size-small);
 }
 
-.mobile .prettify-tags {
+@media (max-width: 768px) .prettify-tags {
   margin: 1em;
 }
 
@@ -797,8 +797,7 @@ html:not(.mobile) #io-original img:active {
 }
 
 /* ADJUSTMENTS FOR MOBILE DEVICES */
-.mobile .card,
-.mobile #content {
+@media (max-width: 768px) .card, @media (max-width: 768px) #content {
   font-size: 120%;
   margin: 0;
 }
@@ -911,10 +910,6 @@ html:not(.mobile) .extra img:active {
 
 /*---------------------------------- SELECT FONTS */
 :root {
-  --font-family: "Carlito";
-}
-
-.mobile {
   --font-family: "Carlito";
 }
 
