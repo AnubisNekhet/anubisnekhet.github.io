@@ -1,0 +1,36 @@
+name: Build Blog Index
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate blog index
+        working-directory: ./res
+        run: node build-blog.js
+
+      - name: Commit changes
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+
+          git add blog/home/index.html
+
+          if ! git diff --cached --quiet; then
+            git commit -m "Update blog index"
+            git push
+          fi
